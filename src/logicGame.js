@@ -8,8 +8,8 @@ const logicGame = (round, taskForGame) => {
   console.log(`Hello, ${name}`);
   console.log(taskForGame);
   for (let i = 0; i < numberOfRounds; i += 1) {
-    const [questionNumber, correctAnswer] = round[i];
-    console.log(`Question: ${questionNumber}`);
+    const [questionNumberOrExpression, correctAnswer] = round[i];
+    console.log(`Question: ${questionNumberOrExpression}`);
     const userAnswer = readlineSync.question('Your answer: ');
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
