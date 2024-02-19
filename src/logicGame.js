@@ -2,24 +2,30 @@ import readlineSync from 'readline-sync';
 
 export const numberOfRounds = 3;
 
-const logicGame = (round, taskForGame) => {
+const logicGame = (questionNumberOrExpression, correctAnswer, taskForGame) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name?');
   console.log(`Hello, ${name}`);
   console.log(taskForGame);
-  for (let i = 0; i < numberOfRounds; i += 1) {
-    const [questionNumberOrExpression, correctAnswer] = round[i];
-    console.log(`Question: ${questionNumberOrExpression}`);
+
+  let counterOfCorrectAnswers = 0;
+  let canPlay = true;
+  let i = 0;
+  while (canPlay && counterOfCorrectAnswers < numberOfRounds) {
+    console.log(`Question: ${questionNumberOrExpression[i]}`);
     const userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
+
+    if (userAnswer !== correctAnswer[i]) {
+      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer[i]}'.\nLet's try again, ${name}!`);
+      canPlay = false;
     } else {
-      console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
-      return;
+      console.log('Correct!');
+      counterOfCorrectAnswers += 1;
+      i += 1;
     }
   }
-
-  console.log(`Congratulations, ${name}`);
+  if (counterOfCorrectAnswers === 3) {
+    console.log(`Congratulations, ${name}!`);
+  }
 };
-
 export default logicGame;
