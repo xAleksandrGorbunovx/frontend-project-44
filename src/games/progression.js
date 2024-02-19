@@ -29,8 +29,8 @@ const progressionGame = () => {
     console.log(firstNumberProgression);
     const progressionStep = generateRandomInteger();
     console.log(progressionStep);
+    // The recommended progression length is 10 numbers.
     const numberOfElements = 10;
-
     questionNumberOrExpression[i] = `${generateArithmeticProgression(firstNumberProgression, progressionStep, numberOfElements)}`;
     console.log(questionNumberOrExpression);
     correctAnswer[i] = progressionStep.toString();
