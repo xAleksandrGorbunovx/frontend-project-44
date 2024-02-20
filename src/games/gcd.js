@@ -15,7 +15,7 @@ const gcdGame = () => {
   for (let i = 0; i < numberOfRounds; i += 1) {
     const number1 = generateRandomInteger();
     const number2 = generateRandomInteger();
-    questionNumberOrExpression[i] = `${number1}  ${number2}`;
+    questionNumberOrExpression[i] = ` ${number1} ${number2}`;
     correctAnswer[i] = (gcd(number1, number2)).toString();
   }
   return logicGame(questionNumberOrExpression, correctAnswer, taskForGame);
