@@ -4,8 +4,12 @@ import logicGame, { numberOfRounds } from '../logicGame.js';
 // A function of replacing a random array element with a string element with dots
 const replaceRandomElement = (arr, numberOfElements) => {
   const randomIndex = Math.floor(Math.random() * numberOfElements);
+  const numberHiddenFromUser = arr[randomIndex];
   arr[randomIndex] = ('..');
-  return arr;
+  return {
+    numberHiddenFromUser1: numberHiddenFromUser,
+    questionNumberOrExpression2: arr,
+  };
 };
 
 // A function that generates a progression
@@ -29,8 +33,9 @@ const progressionGame = () => {
     const progressionStep = generateRandomInteger();
     // The recommended progression length is 10 numbers.
     const numberOfElements = 10;
-    questionNumberOrExpression[i] = `${generateArithmeticProgression(firstNumberProgression, progressionStep, numberOfElements)}`;
-    correctAnswer[i] = progressionStep.toString();
+    const { numberHiddenFromUser1, questionNumberOrExpression2 } = generateArithmeticProgression(firstNumberProgression, progressionStep, numberOfElements);
+    correctAnswer[i] = numberHiddenFromUser1.toString();
+    questionNumberOrExpression[i] = `${questionNumberOrExpression2}`;
   }
   return logicGame(questionNumberOrExpression, correctAnswer, taskForGame);
 };
