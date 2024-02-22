@@ -6,10 +6,13 @@ const replaceRandomElement = (arr, numberOfElements) => {
   const randomIndex = Math.floor(Math.random() * numberOfElements);
   const numberHiddenFromUser = arr[randomIndex];
   arr[randomIndex] = ('..');
+  console.log(numberHiddenFromUser);
+  console.log(arr);
+  
   return {
     numberHiddenFromUser1: numberHiddenFromUser,
-    questionNumberOrExpression2: arr,
-  };
+    questionNumberOrExpression2: arr.join(' '),
+  }
 };
 
 // A function that generates a progression
