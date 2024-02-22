@@ -26,6 +26,8 @@ const calcGame = () => {
         answer = (number1 * number2);
         correctAnswer[i] = answer.toString();
         break;
+      default:
+        return 'something happened to the switch/calc function';
     }
   }
   return logicGame(questionNumberOrExpression, correctAnswer, taskForGame);

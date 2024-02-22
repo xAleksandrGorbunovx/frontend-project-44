@@ -9,7 +9,7 @@ const replaceRandomElement = (arr, numberOfElements) => {
   return {
     numberHiddenFromUser1: numberHiddenFromUser,
     questionNumberOrExpression2: arr.join(' '),
-  }
+  };
 };
 
 // A function that generates a progression
