@@ -2,26 +2,28 @@ import generateRandomInteger from '../generateRandomInteger.js';
 import logicGame, { numberOfRounds } from '../logicGame.js';
 
 // A function of replacing a random array element with a string element with dots
-const replaceRandomElement = (arr, numberOfElements) => {
-  const randomIndex = Math.floor(Math.random() * numberOfElements);
-  const numberHiddenFromUser = arr[randomIndex];
-  arr[randomIndex] = ('..');
+const replaceRandomElement = (array, numOfElements) => {
+  const randomIndex = Math.floor(Math.random() * numOfElements);
+  const numberHiddenFromUser = array[randomIndex];
+  const copyArray = [...array];
+  copyArray[randomIndex] = ('..');
   return {
-    numberHiddenFromUser1: numberHiddenFromUser,
-    questionNumberOrExpression2: arr.join(' '),
+    numTwoPoint: numberHiddenFromUser,
+    NumOrExpression: copyArray.join(' '),
   };
 };
 
 // A function that generates a progression
-const generateArithmeticProgression = (firstNumberProgression, progressionStep, numberOfElements) => {
-  const progression = [firstNumberProgression];
-  let currentNumber = firstNumberProgression;
-  for (let i = 1; i < numberOfElements; i += 1) {
-    currentNumber += progressionStep;
+const makeProgression = (firstNumProg, progStep, numOfElements) => {
+  const progression = [firstNumProg];
+  let currentNumber = firstNumProg;
+  for (let i = 1; i < numOfElements; i += 1) {
+    currentNumber += progStep;
     progression.push(currentNumber);
   }
-  // We apply 'replaceRandomElement' function to the resulting progression array to replace one element with points.
-  return replaceRandomElement(progression, numberOfElements);
+  // We apply 'replaceRandomElement' function to the resulting
+  // progression array to replace one element with points.
+  return replaceRandomElement(progression, numOfElements);
 };
 
 const progressionGame = () => {
@@ -29,13 +31,13 @@ const progressionGame = () => {
   const questionNumberOrExpression = [];
   const correctAnswer = [];
   for (let i = 0; i < numberOfRounds; i += 1) {
-    const firstNumberProgression = generateRandomInteger();
-    const progressionStep = generateRandomInteger();
+    const firstNumProg = generateRandomInteger();
+    const progStep = generateRandomInteger();
     // The recommended progression length is 10 numbers.
-    const numberOfElements = 10;
-    const { numberHiddenFromUser1, questionNumberOrExpression2 } = generateArithmeticProgression(firstNumberProgression, progressionStep, numberOfElements);
-    correctAnswer[i] = numberHiddenFromUser1.toString();
-    questionNumberOrExpression[i] = `${questionNumberOrExpression2}`;
+    const numOfElements = 10;
+    const { numTwoPoint, NumOrExpression } = makeProgression(firstNumProg, progStep, numOfElements);
+    correctAnswer[i] = numTwoPoint.toString();
+    questionNumberOrExpression[i] = `${NumOrExpression}`;
   }
   return logicGame(questionNumberOrExpression, correctAnswer, taskForGame);
 };
