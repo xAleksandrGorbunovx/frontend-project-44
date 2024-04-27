@@ -17,27 +17,27 @@ You will have the opportunity to play five games:
 
 **To start the game, type in the console:**
 
-1) ``` $ *brain-even*``` - to start game "Parity Check".
+1) ```brain-even``` - to start game "Parity Check".
 
 You can also watch the video instructions.
 [Video recording. Game: "Parity Check".](https://asciinema.org/a/U555lUEkdfIOWOr9KdGlvCc3f)
 
-2) ```$ *brain-calc*``` - to start "Calculator".
+2) ```brain-calc``` - to start "Calculator".
 
 You can also watch the video instructions.
 [Video recording. Game: "Calculator".](https://asciinema.org/a/jX2JtPLp5TFM3n7hR4ootvzOF)
 
-3) ```$ *brain-gcd*``` - to start "GCD" (Greatest common divisor).
+3) ```brain-gcd``` - to start "GCD" (Greatest common divisor).
 
 You can also watch the video instructions.
 [#Video recording. Game: "GCD".](https://asciinema.org/a/isoEZywkQQQQhFIEfvqkmIbZj)
 
-4) ```$ *brain-progression*``` - to start "Arithmetic progression".
+4) ```brain-progression``` - to start "Arithmetic progression".
 
 You can also watch the video instructions.
 [#Video recording. Game: "Arithmetic progression".](https://asciinema.org/a/skSR92SPT9VXULzr0mW81e7jB)
 
-5) ```$ *brain-prime*``` - to start "Is it a prime number?".
+5) ```brain-prime``` - to start "Is it a prime number?".
 
 #Video recording. Game: "Is it a prime number?".
 [#Video recording. Game: "Is it a prime number?".](https://asciinema.org/a/q1qqU1qerJw8AA0ugJznUZn4O)
@@ -45,7 +45,7 @@ You can also watch the video instructions.
 To win you need to make three correct answers in a row.
 If you made a mistake try again.
 
-# List of available sites
+### List of available sites
 * [Greatest common divisor](https://en.wikipedia.org/wiki/Greatest_common_divisor)
 * [Arithmetic progression](https://en.wikipedia.org/wiki/Arithmetic_progression)
 * [Prime number](https://en.wikipedia.org/wiki/Prime_number)
