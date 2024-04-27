@@ -1,6 +1,9 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/xAleksandrGorbunovx/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/xAleksandrGorbunovx/frontend-project-44/actions)
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/9ef651f32cc24253521f/maintainability)](https://codeclimate.com/github/xAleksandrGorbunovx/frontend-project-44/maintainability)
+
+
 Welcome to "Brain games".
 With this program you can test your knowledge of mathematics.
 You will have the opportunity to play five games:
@@ -45,3 +48,4 @@ To win you need to make three correct answers in a row.
 If you made a mistake try again.
 
 Good luck. Remember, only a fool makes no mistakes.
+
